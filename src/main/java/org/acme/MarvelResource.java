@@ -1,5 +1,7 @@
 package org.acme;
 
+import java.util.List;
+
 import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
@@ -12,7 +14,7 @@ public class MarvelResource {
 
     @Path("")
     @GET
-    public MarvelDto getPersonajes() {
+    public Object getPersonajes() {
         return service.getPersonajes();
     } 
         
