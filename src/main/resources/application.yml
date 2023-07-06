@@ -1,0 +1,4 @@
+marvel-api/mp-rest/url: https://gateway.marvel.com:443
+marvel-api/mp-rest/scope: javax.inject.Singleton
+publicKey: 39420f089b1f48dc4b7dc9f000ad00db
+privateKey: da2df371691584468986a48c0035b3f5f791bcbf
