@@ -49,6 +49,9 @@ public class MarvelService {
 
             personajes.add(personaje);
         }
+        HashMap<String, Object> total = new HashMap<>();
+        total.put("Total", results.size());
+        personajes.add(0,total);
         return personajes;
     }
 
