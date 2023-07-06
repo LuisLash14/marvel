@@ -6,6 +6,7 @@ import org.apache.commons.codec.digest.DigestUtils;
 import org.eclipse.microprofile.config.inject.ConfigProperty;
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 
+import io.vertx.core.json.JsonObject;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 
@@ -26,7 +27,7 @@ public class MarvelService {
         String privateKey;
 
     
-    public Object getPersonajes(){
+    public JsonObject getPersonajes(){
         String input = ts + privateKey + publicKey;
         String hash = DigestUtils.md5Hex(input);
         return marvel.GET(timestamp , publicKey, hash);

@@ -3,6 +3,7 @@ import java.util.List;
 
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 
+import io.vertx.core.json.JsonObject;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 
@@ -14,7 +15,7 @@ public interface MarvelApiClient {
 
     @GET
     @Path("")
-    Object GET(
+    JsonObject GET(
         @QueryParam("ts") long timestamp,
         @QueryParam("apikey") String apikey,
         @QueryParam("hash") String hash 

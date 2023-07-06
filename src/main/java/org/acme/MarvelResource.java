@@ -2,6 +2,7 @@ package org.acme;
 
 import java.util.List;
 
+import io.vertx.core.json.JsonObject;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
@@ -14,7 +15,7 @@ public class MarvelResource {
 
     @Path("")
     @GET
-    public Object getPersonajes() {
+    public JsonObject getPersonajes() {
         return service.getPersonajes();
     } 
         
