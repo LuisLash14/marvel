@@ -10,16 +10,24 @@ import jakarta.ws.rs.Path;
 import jakarta.ws.rs.QueryParam;
 
 
-@RegisterRestClient(baseUri = "https://gateway.marvel.com:443/v1/public/characters/1017100?")
+@RegisterRestClient(baseUri = "https://gateway.marvel.com:443/v1/public/characters?")
 public interface MarvelApiClient {
 
     @GET
     @Path("")
-    JsonObject GET(
+    JsonObject getList(
         @QueryParam("ts") long timestamp,
         @QueryParam("apikey") String apikey,
         @QueryParam("hash") String hash 
     );
 
+    @GET
+    @Path("")
+    JsonObject getByName(
+        @QueryParam("name") String name,
+        @QueryParam("ts") long timestamp,
+        @QueryParam("apikey") String apikey,
+        @QueryParam("hash") String hash 
+    );
 }
 
